@@ -14,7 +14,7 @@ export const DATA = {
   location: "Melbourne, Australia",
   locationLink: "https://www.google.com/maps/place/melbourne+victoria",
   description:
-    "IT Network & Systems Administrator in Melbourne. Networks, servers, and small tools when the usual process is too slow.",
+    "Software Engineer and IT Systems and Network Administrator in Melbourne.",
   summary:
     "Computer Science grad from [Trent University](/#education), data science stream. I work as an [IT Network & Systems Administrator at Hazeldenes](/#work). Before that I automated fundraising reports, did IT support, and QA on a federal export-control system. [Projects](/#projects) so far: a network health CLI, an Instacart accessibility extension, and a phone-triggered browser agent. I also [did a 90-minute hackathon](/#hackathons) in Toronto.",
   avatarUrl: "/me.png",
