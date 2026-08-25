@@ -10,13 +10,13 @@ export default function HackathonsSection() {
         <div className="flex flex-col gap-y-4 items-center justify-center">
           <div className="flex items-center w-full">
             <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
-            <div className="border bg-primary z-10 rounded-xl px-4 py-1">
-              <span className="text-background text-sm font-medium">{DATA.sections.hackathons.label}</span>
+            <div className="z-10 rounded-full border border-border/70 bg-card/80 px-4 py-1.5 backdrop-blur-md shadow-sm">
+              <span className="text-sm font-medium text-muted-foreground">{DATA.sections.hackathons.label}</span>
             </div>
             <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
           </div>
           <div className="flex flex-col gap-y-3 items-center justify-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">{DATA.sections.hackathons.heading}</h2>
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{DATA.sections.hackathons.heading}</h2>
             <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
               {DATA.sections.hackathons.text.replace("{count}", String(DATA.hackathons.length))}
             </p>
@@ -30,10 +30,10 @@ export default function HackathonsSection() {
                   <img
                     src={hackathon.image}
                     alt={hackathon.title}
-                    className="size-10 bg-card z-10 shrink-0 overflow-hidden p-1 border rounded-full shadow ring-2 ring-border object-contain flex-none"
+                    className="size-10 bg-card/90 z-10 shrink-0 overflow-hidden p-1 border border-border/80 rounded-full shadow-sm ring-1 ring-border/40 object-contain flex-none"
                   />
                 ) : (
-                  <div className="size-10 bg-card z-10 shrink-0 overflow-hidden p-1 border rounded-full shadow ring-2 ring-border flex-none" />
+                  <div className="size-10 bg-card/90 z-10 shrink-0 overflow-hidden p-1 border border-border/80 rounded-full shadow-sm ring-1 ring-border/40 flex-none" />
                 )}
               </TimelineConnectItem>
               <div className="flex flex-1 flex-col justify-start gap-2 min-w-0">

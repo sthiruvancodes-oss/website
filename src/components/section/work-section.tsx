@@ -15,7 +15,7 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
 
   if (!src || imageError) {
     return (
-      <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
+      <div className="size-8 md:size-10 p-1 border border-border/80 rounded-full shadow-sm ring-1 ring-border/40 bg-muted flex-none" />
     );
   }
 
@@ -23,7 +23,7 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
     <img
       src={src}
       alt={alt}
-      className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none"
+      className="size-8 md:size-10 p-1 border border-border/80 rounded-full shadow-sm ring-1 ring-border/40 overflow-hidden object-contain flex-none bg-card/80"
       onError={() => setImageError(true)}
     />
   );

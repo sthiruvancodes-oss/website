@@ -35,10 +35,8 @@ export const CONFIG = {
 
   // ---------------------------------------------------------------------------
   // Font Settings
-  // See https://fontsource.org/?variable=true for fonts that can be installed via package registry
-  // To change fonts:
-  // 1. pnpm install @fontsource-variable/<font-name> (for example 'pnpm add @fontsource-variable/inter'). Install BOTH the sans and mono fonts.
-  // 2. Edit src/styles/global.css - swap the @import and --font-sans and --font-mono values
+  // Uses the Apple system stack (-apple-system / SF Pro) defined in global.css.
+  // Mono falls back to SF Mono, then Geist Mono Variable.
   // ---------------------------------------------------------------------------
 
   // ---------------------------------------------------------------------------
@@ -49,48 +47,48 @@ export const CONFIG = {
   // ---------------------------------------------------------------------------
 
   theme: {
-    radius: "0.625rem",
+    radius: "0.875rem",
 
     light: {
-      background: "oklch(1 0 0)",
-      foreground: "oklch(0.145 0 0)",
-      card: "oklch(1 0 0)",
-      cardForeground: "oklch(0.145 0 0)",
-      popover: "oklch(1 0 0)",
-      popoverForeground: "oklch(0.145 0 0)",
-      primary: "oklch(0.205 0 0)",
-      primaryForeground: "oklch(0.985 0 0)",
-      secondary: "oklch(0.97 0 0)",
-      secondaryForeground: "oklch(0.205 0 0)",
-      muted: "oklch(0.97 0 0)",
-      mutedForeground: "oklch(0.556 0 0)",
-      accent: "oklch(0.97 0 0)",
-      accentForeground: "oklch(0.205 0 0)",
+      background: "oklch(0.975 0.002 260)",
+      foreground: "oklch(0.18 0.01 260)",
+      card: "oklch(1 0 0 / 72%)",
+      cardForeground: "oklch(0.18 0.01 260)",
+      popover: "oklch(0.99 0.002 260 / 92%)",
+      popoverForeground: "oklch(0.18 0.01 260)",
+      primary: "oklch(0.22 0.02 260)",
+      primaryForeground: "oklch(0.99 0 0)",
+      secondary: "oklch(0.94 0.005 260)",
+      secondaryForeground: "oklch(0.22 0.02 260)",
+      muted: "oklch(0.94 0.005 260)",
+      mutedForeground: "oklch(0.45 0.015 260)",
+      accent: "oklch(0.94 0.005 260)",
+      accentForeground: "oklch(0.22 0.02 260)",
       destructive: "oklch(0.577 0.245 27.325)",
-      border: "oklch(0.922 0 0)",
-      input: "oklch(0.922 0 0)",
-      ring: "oklch(0.708 0 0)",
+      border: "oklch(0.88 0.01 260)",
+      input: "oklch(0.88 0.01 260)",
+      ring: "oklch(0.55 0.04 250)",
     },
 
     dark: {
-      background: "oklch(0.18 0 0)",
-      foreground: "oklch(0.985 0 0)",
-      card: "oklch(0.205 0 0)",
-      cardForeground: "oklch(0.985 0 0)",
-      popover: "oklch(0.205 0 0)",
-      popoverForeground: "oklch(0.985 0 0)",
-      primary: "oklch(0.922 0 0)",
-      primaryForeground: "oklch(0.205 0 0)",
-      secondary: "oklch(0.269 0 0)",
-      secondaryForeground: "oklch(0.985 0 0)",
-      muted: "oklch(0.269 0 0)",
-      mutedForeground: "oklch(0.708 0 0)",
-      accent: "oklch(0.269 0 0)",
-      accentForeground: "oklch(0.985 0 0)",
+      background: "oklch(0.14 0.01 260)",
+      foreground: "oklch(0.98 0.002 260)",
+      card: "oklch(0.2 0.01 260 / 72%)",
+      cardForeground: "oklch(0.98 0.002 260)",
+      popover: "oklch(0.2 0.01 260 / 92%)",
+      popoverForeground: "oklch(0.98 0.002 260)",
+      primary: "oklch(0.96 0.002 260)",
+      primaryForeground: "oklch(0.18 0.01 260)",
+      secondary: "oklch(0.24 0.01 260)",
+      secondaryForeground: "oklch(0.98 0.002 260)",
+      muted: "oklch(0.24 0.01 260)",
+      mutedForeground: "oklch(0.72 0.01 260)",
+      accent: "oklch(0.24 0.01 260)",
+      accentForeground: "oklch(0.98 0.002 260)",
       destructive: "oklch(0.704 0.191 22.216)",
-      border: "oklch(1 0 0 / 10%)",
-      input: "oklch(1 0 0 / 15%)",
-      ring: "oklch(0.556 0 0)",
+      border: "oklch(1 0 0 / 12%)",
+      input: "oklch(1 0 0 / 14%)",
+      ring: "oklch(0.62 0.04 250)",
     },
   },
 

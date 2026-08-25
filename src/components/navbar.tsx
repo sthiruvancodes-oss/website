@@ -12,10 +12,10 @@ import { ArrowUpRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const dockIconClassName =
-  "rounded-3xl cursor-pointer size-full bg-background p-0 text-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors";
+  "rounded-2xl cursor-pointer size-full bg-background/80 p-0 text-foreground hover:text-foreground hover:bg-muted/80 backdrop-blur-xl border border-border/60 transition-colors";
 
 const tooltipClassName =
-  "rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]";
+  "rounded-xl bg-primary/95 text-primary-foreground px-3 py-1.5 text-sm font-medium shadow-[0_8px_30px_-12px_rgba(0,0,0,0.35)] backdrop-blur-md";
 
 function TooltipLabel({ label }: { label: string }) {
   return (
@@ -85,7 +85,7 @@ function CvMenu() {
       )}
 
       {open ? (
-        <div className="absolute bottom-[calc(100%+0.75rem)] left-1/2 z-50 w-64 -translate-x-1/2 rounded-2xl border border-border bg-card/95 p-2 text-card-foreground shadow-[0_16px_45px_-18px_rgba(0,0,0,0.45)] backdrop-blur-3xl dark:shadow-[0_16px_45px_-18px_rgba(0,0,0,0.85)]">
+        <div className="absolute bottom-[calc(100%+0.75rem)] left-1/2 z-50 w-64 -translate-x-1/2 rounded-2xl border border-border/70 bg-card/90 p-2 text-card-foreground shadow-[0_12px_40px_-16px_rgba(0,0,0,0.4)] backdrop-blur-xl">
           <div className="flex flex-col gap-1">
             {DATA.cvOptions.map((option) =>
               "href" in option && option.href ? (
@@ -95,7 +95,7 @@ function CvMenu() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
-                  className="group flex items-center justify-between rounded-xl px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  className="group flex min-h-11 items-center justify-between rounded-xl px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
                   <span>{option.label}</span>
                   <ArrowUpRight
@@ -126,7 +126,7 @@ function CvMenu() {
 export default function Navbar() {
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-4 z-30">
-      <Dock className="z-50 pointer-events-auto relative h-14 p-2 w-fit mx-auto flex gap-2 border bg-card/90 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5">
+      <Dock className="z-50 pointer-events-auto relative mx-auto flex h-14 w-fit gap-2 border border-border/60 bg-card/80 p-2 shadow-[0_8px_32px_-12px_rgba(0,0,0,0.25)] backdrop-blur-xl dark:shadow-[0_8px_32px_-12px_rgba(0,0,0,0.55)]">
         {DATA.navbar.map((item) => {
           const isExternal = item.href.startsWith("http");
           return (
@@ -137,7 +137,7 @@ export default function Navbar() {
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noopener noreferrer" : undefined}
                 >
-                  <DockIcon className="rounded-2xl cursor-pointer size-full bg-background p-0 text-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
+                  <DockIcon className={dockIconClassName}>
                     <item.icon className="size-full rounded-sm overflow-hidden object-contain" />
                   </DockIcon>
                 </a>
@@ -179,7 +179,7 @@ export default function Navbar() {
         />
         <Tooltip>
           <TooltipTrigger asChild>
-            <DockIcon className="rounded-3xl cursor-pointer size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
+            <DockIcon className={`${dockIconClassName} text-muted-foreground hover:text-foreground`}>
               <ModeToggle className="size-full cursor-pointer" />
             </DockIcon>
           </TooltipTrigger>

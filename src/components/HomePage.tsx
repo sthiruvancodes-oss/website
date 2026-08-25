@@ -18,7 +18,7 @@ const sectionComponents: Record<string, React.ReactNode> = {
     <section id="about">
       <div className="flex min-h-0 flex-col gap-y-4">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">{DATA.sections.about.heading}</h2>
+          <h2 className="text-xl font-semibold tracking-tight">{DATA.sections.about.heading}</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
@@ -32,7 +32,7 @@ const sectionComponents: Record<string, React.ReactNode> = {
     <section id="work">
       <div className="flex min-h-0 flex-col gap-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <h2 className="text-xl font-bold">{DATA.sections.work.heading}</h2>
+          <h2 className="text-xl font-semibold tracking-tight">{DATA.sections.work.heading}</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 6}>
           <WorkSection />
@@ -44,7 +44,7 @@ const sectionComponents: Record<string, React.ReactNode> = {
     <section id="education">
       <div className="flex min-h-0 flex-col gap-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 7}>
-          <h2 className="text-xl font-bold">{DATA.sections.education.heading}</h2>
+          <h2 className="text-xl font-semibold tracking-tight">{DATA.sections.education.heading}</h2>
         </BlurFade>
         <div className="flex flex-col gap-8">
           {DATA.education.map((education, index) => (
@@ -60,10 +60,10 @@ const sectionComponents: Record<string, React.ReactNode> = {
                     <img
                       src={education.logoUrl}
                       alt={education.school}
-                      className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none"
+                      className="size-8 md:size-10 p-1 border border-border/80 rounded-full shadow-sm ring-1 ring-border/40 overflow-hidden object-contain flex-none bg-card/80"
                     />
                   ) : (
-                    <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
+                    <div className="size-8 md:size-10 p-1 border border-border/80 rounded-full shadow-sm ring-1 ring-border/40 bg-muted flex-none" />
                   )}
                   <div className="flex-1 min-w-0 flex flex-col gap-0.5">
                     <div className="font-semibold leading-none flex items-center gap-2">
@@ -87,12 +87,12 @@ const sectionComponents: Record<string, React.ReactNode> = {
     <section id="skills">
       <div className="flex min-h-0 flex-col gap-y-4">
         <BlurFade delay={BLUR_FADE_DELAY * 9}>
-          <h2 className="text-xl font-bold">{DATA.sections.skills.heading}</h2>
+          <h2 className="text-xl font-semibold tracking-tight">{DATA.sections.skills.heading}</h2>
         </BlurFade>
         <div className="flex flex-wrap gap-2">
           {DATA.skills.map((skill, id) => (
             <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-              <div className="border bg-background border-border ring-2 ring-border/20 rounded-xl h-8 w-fit px-4 flex items-center gap-2">
+              <div className="min-h-11 w-fit rounded-xl border border-border/70 bg-card/70 px-4 backdrop-blur-md flex items-center gap-2">
                 {skill.icon && <skill.icon className="size-4 rounded overflow-hidden object-contain" />}
                 <span className="text-foreground text-sm font-medium">{skill.name}</span>
               </div>
@@ -140,7 +140,7 @@ export default function HomePage() {
             <div className="gap-2 flex flex-col order-2 md:order-1">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
+                className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
               />
@@ -151,9 +151,9 @@ export default function HomePage() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
-              <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
+              <Avatar className="size-24 md:size-32 rounded-[1.35rem] border-0 shadow-md ring-1 ring-white/10">
+                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} className="rounded-[1.35rem] object-cover" />
+                <AvatarFallback className="rounded-[1.35rem]">{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>
           </div>

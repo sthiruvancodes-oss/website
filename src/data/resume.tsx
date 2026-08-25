@@ -22,8 +22,8 @@ export const DATA = {
     "Software Engineer and IT Systems and Network Administrator in Melbourne.",
   summary:
     "Computer Science grad from [Trent University](/#education), data science stream. I work as an [IT Network & Systems Administrator at Hazeldenes](/#work). Before that I automated fundraising reports, did IT support, and QA on a federal export-control system. [Projects](/#projects) so far: a Roblox trend radar, a phone-triggered browser agent, a network health CLI, and an Instacart accessibility extension. I also [show up to Cursor hackathons](/#hackathons) when I can.",
-  avatarUrl: "/me.png",
-  ogImage: "/me.png",
+  avatarUrl: "/logo.png",
+  ogImage: "/logo.png",
   cvOptions: [
     { label: "Software Engineering", href: "/Saison_Thiruvananthaselvan_Software_Engineer.pdf" },
     { label: "IT Australia", href: "/Saison_Thiruvananthaselvan_IT_Australia.pdf" },

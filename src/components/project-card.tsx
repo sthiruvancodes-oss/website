@@ -143,8 +143,8 @@ export function ProjectCard({
   return (
     <div
       className={cn(
-        "group relative flex h-[clamp(530px,136vw,560px)] flex-col overflow-hidden rounded-xl border border-border transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:h-[600px]",
-        href ? "cursor-pointer hover:ring-2 hover:ring-muted" : "hover:ring-1 hover:ring-muted",
+        "group relative flex h-[clamp(530px,136vw,560px)] flex-col overflow-hidden rounded-2xl border border-border/70 bg-card/75 backdrop-blur-md shadow-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:h-[600px]",
+        href ? "cursor-pointer hover:border-border hover:shadow-md" : "hover:border-border hover:shadow-md",
         hasDetails && "cursor-default sm:cursor-pointer",
         className
       )}
@@ -166,7 +166,7 @@ export function ProjectCard({
               onClick={(event: React.MouseEvent) => event.stopPropagation()}
             >
               <Badge
-                className="flex h-7 items-center gap-1.5 bg-black px-2.5 text-[11px] text-white hover:bg-black/90"
+                className="flex h-8 min-w-8 items-center gap-1.5 rounded-full bg-black/85 px-3 text-[11px] font-medium text-white backdrop-blur-sm hover:bg-black/75"
                 variant="default"
               >
                 {link.icon}
@@ -215,7 +215,7 @@ export function ProjectCard({
                 return (
                   <Badge
                     key={tag}
-                    className="flex h-6 w-fit items-center gap-1.5 border border-border px-2 text-[11px] font-medium"
+                    className="flex h-7 w-fit items-center gap-1.5 rounded-full border border-border/70 bg-background/60 px-2.5 text-[11px] font-medium backdrop-blur-sm"
                     variant="outline"
                   >
                     {Icon ? (
@@ -242,8 +242,8 @@ export function ProjectCard({
           </div>
           <div className="mt-1.5 grid min-h-0 flex-1 content-start gap-1 overflow-hidden pr-1 sm:mt-2 sm:gap-2">
             {details?.map((detail) => (
-              <div key={detail.label} className="rounded-lg border border-border/80 bg-muted/30 p-1.5 sm:p-2">
-                <p className="text-[8.5px] font-semibold uppercase tracking-[0.16em] text-primary sm:text-[9.5px]">
+              <div key={detail.label} className="rounded-xl border border-border/60 bg-muted/40 p-2 backdrop-blur-sm sm:p-2.5">
+                <p className="text-[8.5px] font-semibold uppercase tracking-[0.12em] text-muted-foreground sm:text-[9.5px]">
                   {detail.label}
                 </p>
                 <p className="mt-1 text-[10.5px] leading-tight text-muted-foreground sm:text-[11.5px] sm:leading-snug">
