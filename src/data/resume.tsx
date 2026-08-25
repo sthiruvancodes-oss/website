@@ -14,31 +14,32 @@ export const DATA = {
   location: "Melbourne, Australia",
   locationLink: "https://www.google.com/maps/place/melbourne+victoria",
   description:
-    "IT Network & Systems Administrator. I build automation, accessibility tools, and small products that solve real operational problems.",
+    "IT Network & Systems Administrator in Melbourne. Networks, servers, and small tools when the usual process is too slow.",
   summary:
-    "I'm a Computer Science graduate from [Trent University](/#education) (data science) currently working as an [IT Network & Systems Administrator at Hazeldenes](/#work). Before that I automated fundraising data workflows, supported IT operations, and did QA on a federal export-control system. On the side I ship [tools people can actually use](/#projects) — a network health CLI, an accessibility Chrome extension, and a phone-triggered browser agent. I also [hack on real problems under a clock](/#hackathons).",
+    "Computer Science grad from [Trent University](/#education), data science stream. I work as an [IT Network & Systems Administrator at Hazeldenes](/#work). Before that I automated fundraising reports, did IT support, and QA on a federal export-control system. [Projects](/#projects) so far: a network health CLI, an Instacart accessibility extension, and a phone-triggered browser agent. I also [did a 90-minute hackathon](/#hackathons) in Toronto.",
   avatarUrl: "/me.png",
   ogImage: "/me.png",
   cvOptions: [
-    { label: "IT" },
-    { label: "Software Engineering" },
+    { label: "Software Engineering", href: "/Saison_Thiruvananthaselvan_Software_Engineer.pdf" },
+    { label: "IT Australia", href: "/Saison_Thiruvananthaselvan_IT_Australia.pdf" },
+    { label: "IT Canada", href: "/Saison_Thiruvananthaselvan_IT_Canada.pdf" },
   ],
   sections: {
     about: { order: 1, enabled: true, heading: "About" },
-    work: { order: 2, enabled: true, heading: "Work Experience", presentLabel: "Present" },
+    work: { order: 2, enabled: true, heading: "Work", presentLabel: "Present" },
     education: { order: 3, enabled: true, heading: "Education" },
     skills: { order: 4, enabled: true, heading: "Skills" },
     projects: {
       order: 5, enabled: true,
-      label: "My Projects",
-      heading: "Check out my latest work",
-      text: "I like tools that replace a painful manual loop. Here are a few I built recently — from IT ops CLIs to accessibility extensions.",
+      label: "Projects",
+      heading: "Things I've built",
+      text: "Most of these started as a job I was tired of doing by hand.",
     },
     hackathons: {
       order: 6, enabled: true,
       label: "Hackathons",
-      heading: "I like building things",
-      text: "I showed up to the Cursor Toronto hackathon with 90 minutes on the clock, a real problem pulled from Reddit, and a rule that the demo had to actually work. We shipped.",
+      heading: "90 minutes, one demo",
+      text: "Cursor Toronto. Teams of five, a problem from Reddit, and it had to work on stage.",
     },
     photos: {
       order: 7, enabled: false,
@@ -47,8 +48,8 @@ export const DATA = {
     contact: {
       order: 8, enabled: true,
       label: "Contact",
-      heading: "Get in Touch",
-      text: "Want to chat? Message me on LinkedIn with a direct question and I'll get back when I can.",
+      heading: "Say hi",
+      text: "LinkedIn is the easiest way to reach me.",
     },
   },
   photos: [],
@@ -112,7 +113,7 @@ export const DATA = {
       start: "April 2026",
       end: undefined,
       description:
-        "Run day-to-day IT and network operations for a food manufacturing business — keeping systems, connectivity, and internal tooling reliable for a distributed workforce.",
+        "Day-to-day IT and network ops at a food manufacturing site. Servers, connectivity, accounts, and the internal tools people need to keep working.",
     },
     {
       company: "Community Collective",
@@ -124,7 +125,7 @@ export const DATA = {
       start: "September 2025",
       end: "December 2025",
       description:
-        "Built a cross-platform Electron app that automates campaign CSV validation with campaign-specific business logic and a non-technical UI. Shipped a Flask + AWS Elastic Beanstalk dashboard that pulled live campaign data and replaced manual reporting. Rule-based checks cut manual QA time by more than 80%.",
+        "Built an Electron app that checks campaign CSVs against campaign-specific rules, with a UI that non-technical staff can use. Also shipped a Flask + AWS Elastic Beanstalk dashboard that pulled live campaign data so people weren't exporting reports by hand. Rule-based checks cut manual QA time by more than 80%.",
     },
     {
       company: "MACA",
@@ -136,7 +137,7 @@ export const DATA = {
       start: "April 2024",
       end: "October 2025",
       description:
-        "Supported IT systems, hardware, and network operations — the unglamorous work that keeps people productive.",
+        "IT support. Hardware, accounts, network issues, and getting people back online.",
     },
     {
       company: "Global Affairs Canada",
@@ -148,14 +149,14 @@ export const DATA = {
       start: "September 2022",
       end: "December 2022",
       description:
-        "Found and fixed bugs on the New Export Import Control System ahead of a version update. Wrote test cases, ran them in IBM Rational Functional Tester, and worked with SEIT teammates to clear impediments.",
+        "Found and fixed bugs on the New Export Import Control System before a version update. Wrote test cases, ran them in IBM Rational Functional Tester, and worked with the SEIT team to clear blockers.",
     },
   ],
   education: [
     {
       school: "Trent University",
       href: "https://www.trentu.ca",
-      degree: "Bachelor of Science, Computer Science — Data Science",
+      degree: "Bachelor of Science, Computer Science (Data Science)",
       logoUrl: "https://www.google.com/s2/favicons?domain=trentu.ca&sz=128",
       start: "2020",
       end: "2025",
@@ -168,7 +169,7 @@ export const DATA = {
       dates: "August 2026",
       active: true,
       description:
-        "A network health CLI for the checks I was tired of running by hand before a change: ICMP, TCP, DNS, HTTP, and TLS. Concurrent checks, text/JSON/HTML reports, and exit codes you can drop into a script. 63 mocked tests and CI on Linux, macOS, and Windows.",
+        "CLI for the checks I used to run by hand before a change: ICMP, TCP, DNS, HTTP, and TLS. Concurrent probes, text/JSON/HTML reports, and exit codes you can drop into a script. 63 mocked tests and CI on Linux, macOS, and Windows.",
       technologies: [
         "Python",
         "CLI",
@@ -180,19 +181,19 @@ export const DATA = {
       details: [
         {
           label: "Goal",
-          text: "Replace the pre-change ritual of ping, curl, dig, and openssl with one command that reports whether a host is actually healthy.",
+          text: "One command that tells me if a host is healthy before I change anything.",
         },
         {
           label: "Why",
-          text: "I kept running the same checks by hand before touching production. Missing one meant finding out after the change, not before.",
+          text: "I was running ping, curl, dig, and openssl separately. Easy to skip one.",
         },
         {
           label: "Build",
-          text: "Python CLI with concurrent ICMP, TCP, DNS, HTTP, and TLS probes. Text/JSON/HTML reports, scriptable exit codes, 63 mocked tests, and CI on Linux, macOS, and Windows.",
+          text: "Python CLI. Concurrent ICMP, TCP, DNS, HTTP, and TLS probes. Reports in text, JSON, or HTML. 63 mocked tests. CI on Linux, macOS, and Windows.",
         },
         {
           label: "Result",
-          text: "A drop-in health check I actually use before network changes, instead of a pile of one-off commands.",
+          text: "I run this before network changes now, instead of a pile of one-off commands.",
         },
       ],
       links: [
@@ -211,7 +212,7 @@ export const DATA = {
       dates: "August 2026",
       active: true,
       description:
-        "Chrome extension for a visually impaired friend who kept getting groceries he didn't order. Flags items silently set to auto-substitute, colour-codes the options, and lets you change Instacart's real setting in one click. Storage permission only — no network calls, no analytics.",
+        "Chrome extension for a visually impaired friend who kept getting groceries he didn't order. It flags items set to auto-substitute, colour-codes the options, and lets you change Instacart's setting in one click. Storage permission only. No network calls, no analytics.",
       technologies: [
         "JavaScript",
         "Chrome Extension",
@@ -221,15 +222,15 @@ export const DATA = {
       details: [
         {
           label: "Goal",
-          text: "Make Instacart's hidden auto-substitute setting obvious, and let someone change it without hunting through menus.",
+          text: "Make Instacart's auto-substitute setting obvious, and make it easy to turn off.",
         },
         {
           label: "Why",
-          text: "A visually impaired friend kept receiving groceries he never ordered because items were silently set to auto-substitute.",
+          text: "A friend kept receiving groceries he never ordered. Items were set to auto-substitute and he couldn't see that.",
         },
         {
           label: "Build",
-          text: "Manifest V3 Chrome extension that flags auto-sub items, colour-codes the options, and writes Instacart's real setting in one click. Storage permission only — no network, no analytics.",
+          text: "Manifest V3 Chrome extension. Flags auto-sub items, colour-codes the options, writes Instacart's setting in one click. Storage permission only. No network, no analytics.",
         },
         {
           label: "Result",
@@ -252,7 +253,7 @@ export const DATA = {
       dates: "August 2026",
       active: true,
       description:
-        "Phone-triggered browser agent with a live Chromium view. Give it a natural-language instruction and Claude drives a real headed browser session while the UI shows the same page.",
+        "Browser agent you trigger from a phone, with a live Chromium view. You type an instruction, Claude drives a headed browser, and the UI shows the same page.",
       technologies: [
         "Python",
         "browser-use",
@@ -262,19 +263,19 @@ export const DATA = {
       details: [
         {
           label: "Goal",
-          text: "Trigger a real browser agent from a phone, and watch the same Chromium session live while it works.",
+          text: "Start a browser agent from my phone and watch the same Chromium window while it works.",
         },
         {
           label: "Why",
-          text: "Most agents hide the browser. I wanted to see the page move, not just a log of what the model claimed it did.",
+          text: "A lot of agents hide the browser. I wanted to see the page, not a log after the fact.",
         },
         {
           label: "Build",
-          text: "Python + browser-use + Claude driving a headed Chromium session. Natural-language instruction in, live view of the same tab out.",
+          text: "Python, browser-use, and Claude driving a headed Chromium session. Instruction in, live view of the same tab out.",
         },
         {
           label: "Result",
-          text: "A phone-triggered loop where you can watch the agent click through a real page instead of trusting a transcript.",
+          text: "I can watch it click through a page instead of trusting a transcript.",
         },
       ],
       links: [
@@ -293,7 +294,7 @@ export const DATA = {
       dates: "June 2026",
       active: false,
       description:
-        "Hackathon product for wedding photographers who close bookings over WhatsApp mid-shoot, then wait days to invoice. Paste a booking line, get an invoice and payment link in seconds, send it over SMS or WhatsApp. We took invoice delay from 3.2 days down to 28 seconds.",
+        "Hackathon project for wedding photographers who book over WhatsApp mid-shoot, then take days to invoice. Paste a booking line, get an invoice and payment link, send it over SMS or WhatsApp. Invoice time went from 3.2 days to 28 seconds.",
       technologies: [
         "HTML",
         "JavaScript",
@@ -308,7 +309,7 @@ export const DATA = {
         },
         {
           label: "Why",
-          text: "Wedding photographers close bookings mid-shoot, then wait days to invoice. The delay is where money leaks.",
+          text: "They close the booking on WhatsApp during a shoot, then invoice days later.",
         },
         {
           label: "Build",
@@ -316,7 +317,7 @@ export const DATA = {
         },
         {
           label: "Result",
-          text: "Invoice delay went from 3.2 days to 28 seconds. One of 5 groups out of 20 that made it to demo.",
+          text: "Invoice time went from 3.2 days to 28 seconds. One of 5 groups out of 20 that made it to demo.",
         },
       ],
       links: [
@@ -336,7 +337,7 @@ export const DATA = {
       dates: "June 25th, 2026",
       location: "Toronto, Ontario",
       description:
-        "90 minutes, teams of five, a real problem sourced from Reddit, and it had to work. We built Field Invoice so wedding photographers can bill from the field instead of waiting 3.2 days. One of 5 groups out of 20 that made it to demo.",
+        "90 minutes, teams of five, a problem from Reddit, and it had to work. We built Field Invoice so wedding photographers can bill from the field instead of waiting days. One of 5 groups out of 20 that made it to demo.",
       image: "https://www.google.com/s2/favicons?domain=cursor.com&sz=128",
       win: "Demo finalist",
       links: [

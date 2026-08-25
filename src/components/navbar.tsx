@@ -85,7 +85,7 @@ function CvMenu() {
       )}
 
       {open ? (
-        <div className="absolute bottom-[calc(100%+0.75rem)] left-1/2 z-50 w-56 -translate-x-1/2 rounded-2xl border border-border bg-card/95 p-2 text-card-foreground shadow-[0_16px_45px_-18px_rgba(0,0,0,0.45)] backdrop-blur-3xl dark:shadow-[0_16px_45px_-18px_rgba(0,0,0,0.85)]">
+        <div className="absolute bottom-[calc(100%+0.75rem)] left-1/2 z-50 w-64 -translate-x-1/2 rounded-2xl border border-border bg-card/95 p-2 text-card-foreground shadow-[0_16px_45px_-18px_rgba(0,0,0,0.45)] backdrop-blur-3xl dark:shadow-[0_16px_45px_-18px_rgba(0,0,0,0.85)]">
           <div className="flex flex-col gap-1">
             {DATA.cvOptions.map((option) =>
               "href" in option && option.href ? (

@@ -34,7 +34,7 @@ export default function BlogList({ posts, allPostsCount, pagination, pageSize }:
           </span>
         </h1>
         <p className="text-sm text-muted-foreground mb-8">
-          Notes on the tools I build, the IT work behind them, and whatever I'm learning.
+          Notes on tools, IT work, and whatever I felt like writing down.
         </p>
       </BlurFade>
 
@@ -114,7 +114,7 @@ export default function BlogList({ posts, allPostsCount, pagination, pageSize }:
         <BlurFade delay={BLUR_FADE_DELAY * 2}>
           <div className="flex flex-col items-center justify-center py-12 px-4 border border-border rounded-xl">
             <p className="text-muted-foreground text-center">
-              No blog posts yet. Check back soon!
+              Nothing here yet.
             </p>
           </div>
         </BlurFade>
