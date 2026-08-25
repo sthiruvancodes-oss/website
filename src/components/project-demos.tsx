@@ -125,10 +125,51 @@ export function InvoiceDemo() {
   );
 }
 
+export function PulseDemo() {
+  return (
+    <DemoFrame className="bg-[#0b1220] p-3">
+      <div className="relative z-10 flex h-[calc(100%-0.5rem)] w-[calc(100%-0.5rem)] flex-col overflow-hidden rounded-xl border border-white/10 bg-[#111827] p-3 text-[10px] text-zinc-200 shadow-[0_0_20px_rgba(0,0,0,0.42)] sm:text-[11px]">
+        <div className="mb-2 flex items-center justify-between">
+          <p className="font-semibold tracking-tight text-white">Pulse</p>
+          <span className="rounded-full bg-emerald-500/15 px-2 py-0.5 text-[9px] font-medium text-emerald-300">
+            live
+          </span>
+        </div>
+        <div className="grid flex-1 grid-cols-2 gap-2">
+          <div className="rounded-lg border border-white/10 bg-white/5 p-2">
+            <p className="text-[9px] uppercase tracking-wide text-zinc-500">Blowing up</p>
+            <p className="mt-1 font-semibold text-white">Adopt Me!</p>
+            <p className="mt-1 text-[9px] text-orange-300">heat 94</p>
+          </div>
+          <div className="rounded-lg border border-white/10 bg-white/5 p-2">
+            <p className="text-[9px] uppercase tracking-wide text-zinc-500">Loop</p>
+            <p className="mt-1 font-semibold text-white">Pet economy</p>
+            <p className="mt-1 text-[9px] text-sky-300">trade + hatch</p>
+          </div>
+          <div className="col-span-2 rounded-lg border border-white/10 bg-black/30 p-2">
+            <div className="mb-1.5 flex items-end gap-1">
+              <span className="h-3 w-1.5 rounded-sm bg-sky-400/80" />
+              <span className="h-5 w-1.5 rounded-sm bg-sky-400/80" />
+              <span className="h-4 w-1.5 rounded-sm bg-sky-400/80" />
+              <span className="h-7 w-1.5 rounded-sm bg-emerald-400/90" />
+              <span className="h-6 w-1.5 rounded-sm bg-emerald-400/90" />
+              <span className="h-8 w-1.5 rounded-sm bg-orange-400/90" />
+              <span className="h-5 w-1.5 rounded-sm bg-sky-400/80" />
+              <span className="h-6 w-1.5 rounded-sm bg-emerald-400/90" />
+            </div>
+            <p className="text-[9px] text-zinc-500">session sparkline · genre mix shifting</p>
+          </div>
+        </div>
+      </div>
+    </DemoFrame>
+  );
+}
+
 export function ProjectDemo({ kind }: { kind?: string }) {
   if (kind === "terminal") return <TerminalDemo />;
   if (kind === "extension") return <ExtensionDemo />;
   if (kind === "browser") return <BrowserDemo />;
   if (kind === "invoice") return <InvoiceDemo />;
+  if (kind === "pulse") return <PulseDemo />;
   return null;
 }

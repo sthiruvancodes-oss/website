@@ -6,6 +6,11 @@ import { Nodejs } from "@/components/ui/svgs/nodejs";
 import { Python } from "@/components/ui/svgs/python";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
+import { Java } from "@/components/ui/svgs/java";
+import { Csharp } from "@/components/ui/svgs/csharp";
+import { Golang } from "@/components/ui/svgs/golang";
+import { Kubernetes } from "@/components/ui/svgs/kubernetes";
+import { Javascript, Nextjs } from "@/components/tech-icons";
 
 export const DATA = {
   name: "Saison Thiruvananthaselvan",
@@ -16,7 +21,7 @@ export const DATA = {
   description:
     "Software Engineer and IT Systems and Network Administrator in Melbourne.",
   summary:
-    "Computer Science grad from [Trent University](/#education), data science stream. I work as an [IT Network & Systems Administrator at Hazeldenes](/#work). Before that I automated fundraising reports, did IT support, and QA on a federal export-control system. [Projects](/#projects) so far: a network health CLI, an Instacart accessibility extension, and a phone-triggered browser agent. I also [show up to Cursor hackathons](/#hackathons) when I can.",
+    "Computer Science grad from [Trent University](/#education), data science stream. I work as an [IT Network & Systems Administrator at Hazeldenes](/#work). Before that I automated fundraising reports, did IT support, and QA on a federal export-control system. [Projects](/#projects) so far: a Roblox trend radar, a phone-triggered browser agent, a network health CLI, and an Instacart accessibility extension. I also [show up to Cursor hackathons](/#hackathons) when I can.",
   avatarUrl: "/me.png",
   ogImage: "/me.png",
   cvOptions: [
@@ -55,11 +60,17 @@ export const DATA = {
   photos: [],
   skills: [
     { name: "Python", icon: Python },
+    { name: "JavaScript", icon: Javascript },
+    { name: "TypeScript", icon: Typescript },
     { name: "React", icon: ReactLight },
-    { name: "Typescript", icon: Typescript },
+    { name: "Next.js", icon: Nextjs },
     { name: "Node.js", icon: Nodejs },
+    { name: "Java", icon: Java },
+    { name: "C#", icon: Csharp },
+    { name: "Go", icon: Golang },
     { name: "Postgres", icon: Postgresql },
     { name: "Docker", icon: Docker },
+    { name: "Kubernetes", icon: Kubernetes },
   ],
   navbar: [
     { href: "/", icon: House, label: "Home" },
@@ -164,6 +175,93 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Pulse",
+      href: "https://sthiruvancodes-oss.github.io/roblox-pulse/",
+      dates: "August 2026",
+      active: true,
+      description:
+        "Radar for Roblox developers: what's blowing up, what the loop actually is, and what I'd steal for the next game. Dedicated to a late friend I built Roblox games with back in 2013. Browser never talks to Roblox directly; a Node poller ships snapshots to the React app.",
+      technologies: [
+        "TypeScript",
+        "React",
+        "Node.js",
+        "Tailwind CSS",
+      ],
+      details: [
+        {
+          label: "Goal",
+          text: "Show which Roblox experiences are heating up, and what the gameplay loop looks like, without guessing from a chart.",
+        },
+        {
+          label: "Why",
+          text: "Roblox looks nothing like 2013. I wanted a live read on what's working before I build the next thing.",
+        },
+        {
+          label: "Build",
+          text: "React + TypeScript + Vite frontend. Express poller hits public Roblox APIs, caches a snapshot, and serves /api/pulse. GitHub Pages deploys a fresh snapshot about every 15 minutes.",
+        },
+        {
+          label: "Result",
+          text: "A live dashboard with heat labels, sparklines, and genre patterns. Stale flag keeps the last good snapshot up if Roblox rate-limits.",
+        },
+      ],
+      links: [
+        {
+          type: "Live",
+          href: "https://sthiruvancodes-oss.github.io/roblox-pulse/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/sthiruvancodes-oss/roblox-pulse",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      demo: "pulse",
+      mediaGradient: "#0f172a",
+    },
+    {
+      title: "Dispatch",
+      href: "https://github.com/sthiruvancodes-oss/dispatch",
+      dates: "August 2026",
+      active: true,
+      description:
+        "Call a number or type a task. A real Chrome window does the clicking, and you watch it happen. Built at the Cursor x Intuit hackathon with Davies (Elise AI), Akshin Makkar (Mercor), and Manan Joshi.",
+      technologies: [
+        "Python",
+        "TypeScript",
+        "Next.js",
+        "React",
+      ],
+      details: [
+        {
+          label: "Goal",
+          text: "Start a browser agent from a phone or the web UI, and watch the same Chrome window while it works.",
+        },
+        {
+          label: "Why",
+          text: "A lot of agents hide the browser. I wanted to see the page, not a log after the fact.",
+        },
+        {
+          label: "Build",
+          text: "Python / FastAPI + browser-use + Claude. Next.js streams screenshots of the live Chrome session. Twilio handles the phone trigger.",
+        },
+        {
+          label: "Result",
+          text: "You call or type an instruction, Chrome moves in the live view, and the agent reports back.",
+        },
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/sthiruvancodes-oss/dispatch",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      demo: "browser",
+      mediaGradient: "#111827",
+    },
+    {
       title: "nethealth",
       href: "https://github.com/sthiruvancodes-oss/ICT_ToolsAIG",
       dates: "August 2026",
@@ -172,11 +270,6 @@ export const DATA = {
         "CLI for the checks I used to run by hand before a change: ICMP, TCP, DNS, HTTP, and TLS. Concurrent probes, text/JSON/HTML reports, and exit codes you can drop into a script. 63 mocked tests and CI on Linux, macOS, and Windows.",
       technologies: [
         "Python",
-        "CLI",
-        "ICMP",
-        "DNS",
-        "TLS",
-        "pytest",
       ],
       details: [
         {
@@ -215,9 +308,6 @@ export const DATA = {
         "Chrome extension for a visually impaired friend who kept getting groceries he didn't order. It flags items set to auto-substitute, colour-codes the options, and lets you change Instacart's setting in one click. Storage permission only. No network calls, no analytics.",
       technologies: [
         "JavaScript",
-        "Chrome Extension",
-        "MV3",
-        "Accessibility",
       ],
       details: [
         {
@@ -248,47 +338,6 @@ export const DATA = {
       mediaGradient: "#0f172a",
     },
     {
-      title: "Dispatch",
-      href: "https://github.com/sthiruvancodes-oss/dispatch-browser-agent",
-      dates: "August 2026",
-      active: true,
-      description:
-        "Browser agent you trigger from a phone, with a live Chromium view. Built at the Cursor x Intuit hackathon with Davies (Elise AI), Akshin Makkar (Mercor), and Manan Joshi. You type an instruction, Claude drives a headed browser, and the UI shows the same page.",
-      technologies: [
-        "Python",
-        "browser-use",
-        "Claude",
-        "Chromium",
-      ],
-      details: [
-        {
-          label: "Goal",
-          text: "Start a browser agent from my phone and watch the same Chromium window while it works.",
-        },
-        {
-          label: "Why",
-          text: "A lot of agents hide the browser. I wanted to see the page, not a log after the fact.",
-        },
-        {
-          label: "Build",
-          text: "Python, browser-use, and Claude driving a headed Chromium session. Built with Davies, Akshin, and Manan at the Cursor x Intuit PM hackathon. Instruction in, live view of the same tab out.",
-        },
-        {
-          label: "Result",
-          text: "A phone-triggered loop where you can watch the agent click through a page instead of trusting a transcript.",
-        },
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/sthiruvancodes-oss/dispatch-browser-agent",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      demo: "browser",
-      mediaGradient: "#111827",
-    },
-    {
       title: "Field Invoice",
       href: "https://github.com/sthiruvancodes-oss/field-invoice",
       dates: "June 2026",
@@ -298,9 +347,6 @@ export const DATA = {
       technologies: [
         "HTML",
         "JavaScript",
-        "AI agent",
-        "SMS",
-        "WhatsApp",
       ],
       details: [
         {
@@ -343,7 +389,7 @@ export const DATA = {
         {
           title: "Source",
           icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/sthiruvancodes-oss/dispatch-browser-agent",
+          href: "https://github.com/sthiruvancodes-oss/dispatch",
         },
       ],
     },

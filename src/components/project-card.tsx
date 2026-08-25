@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { ProjectDemo } from "@/components/project-demos";
+import { getTechIcon } from "@/components/tech-icons";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, MousePointer2 } from "lucide-react";
 import { useState } from "react";
@@ -209,15 +210,21 @@ export function ProjectCard({
           </div>
           {tags && tags.length > 0 && (
             <div className="mt-auto flex flex-wrap gap-1">
-              {tags.map((tag) => (
-                <Badge
-                  key={tag}
-                  className="h-6 w-fit border border-border px-2 text-[11px] font-medium"
-                  variant="outline"
-                >
-                  {tag}
-                </Badge>
-              ))}
+              {tags.map((tag) => {
+                const Icon = getTechIcon(tag);
+                return (
+                  <Badge
+                    key={tag}
+                    className="flex h-6 w-fit items-center gap-1.5 border border-border px-2 text-[11px] font-medium"
+                    variant="outline"
+                  >
+                    {Icon ? (
+                      <Icon className="size-3.5 shrink-0 overflow-hidden rounded-[2px] object-contain" />
+                    ) : null}
+                    {tag}
+                  </Badge>
+                );
+              })}
             </div>
           )}
         </div>
