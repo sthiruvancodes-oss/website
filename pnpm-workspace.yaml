@@ -1,0 +1,11 @@
+peerDependencyRules:
+  allowedVersions:
+    tsconfck>typescript: "6"
+
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+
+allowBuilds:
+  esbuild: true
+  sharp: true
