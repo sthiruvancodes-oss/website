@@ -16,7 +16,7 @@ export const DATA = {
   description:
     "Software Engineer and IT Systems and Network Administrator in Melbourne.",
   summary:
-    "Computer Science grad from [Trent University](/#education), data science stream. I work as an [IT Network & Systems Administrator at Hazeldenes](/#work). Before that I automated fundraising reports, did IT support, and QA on a federal export-control system. [Projects](/#projects) so far: a network health CLI, an Instacart accessibility extension, and a phone-triggered browser agent. I also [did a 90-minute hackathon](/#hackathons) in Toronto.",
+    "Computer Science grad from [Trent University](/#education), data science stream. I work as an [IT Network & Systems Administrator at Hazeldenes](/#work). Before that I automated fundraising reports, did IT support, and QA on a federal export-control system. [Projects](/#projects) so far: a network health CLI, an Instacart accessibility extension, and a phone-triggered browser agent. I also [show up to Cursor hackathons](/#hackathons) when I can.",
   avatarUrl: "/me.png",
   ogImage: "/me.png",
   cvOptions: [
@@ -38,8 +38,8 @@ export const DATA = {
     hackathons: {
       order: 6, enabled: true,
       label: "Hackathons",
-      heading: "90 minutes, one demo",
-      text: "Cursor Toronto. Teams of five, a problem from Reddit, and it had to work on stage.",
+      heading: "Build under a clock",
+      text: "A few Cursor weekends. Some shipped to demo. One turned into Dispatch.",
     },
     photos: {
       order: 7, enabled: false,
@@ -253,7 +253,7 @@ export const DATA = {
       dates: "August 2026",
       active: true,
       description:
-        "Browser agent you trigger from a phone, with a live Chromium view. You type an instruction, Claude drives a headed browser, and the UI shows the same page.",
+        "Browser agent you trigger from a phone, with a live Chromium view. Built at the Cursor x Intuit hackathon with Davies (Elise AI), Akshin Makkar (Mercor), and Manan Joshi. You type an instruction, Claude drives a headed browser, and the UI shows the same page.",
       technologies: [
         "Python",
         "browser-use",
@@ -271,11 +271,11 @@ export const DATA = {
         },
         {
           label: "Build",
-          text: "Python, browser-use, and Claude driving a headed Chromium session. Instruction in, live view of the same tab out.",
+          text: "Python, browser-use, and Claude driving a headed Chromium session. Built with Davies, Akshin, and Manan at the Cursor x Intuit PM hackathon. Instruction in, live view of the same tab out.",
         },
         {
           label: "Result",
-          text: "I can watch it click through a page instead of trusting a transcript.",
+          text: "A phone-triggered loop where you can watch the agent click through a page instead of trusting a transcript.",
         },
       ],
       links: [
@@ -332,6 +332,29 @@ export const DATA = {
     },
   ],
   hackathons: [
+    {
+      title: "Cursor x Intuit Hackathon",
+      dates: "August 2026",
+      location: "Toronto, Ontario",
+      description:
+        "PM-focused Cursor x Intuit weekend. Built Dispatch with Davies (Product Solutions at Elise AI, UsersCRM and VoiceAI), Akshin Makkar (PM at Mercor), and Manan Joshi (PM, idea support). Phone-triggered browser agent with a live Chromium view.",
+      image: "https://www.google.com/s2/favicons?domain=cursor.com&sz=128",
+      links: [
+        {
+          title: "Source",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/sthiruvancodes-oss/dispatch-browser-agent",
+        },
+      ],
+    },
+    {
+      title: "Cursor Hackathon",
+      dates: "July 2026",
+      location: "Toronto, Ontario",
+      description:
+        "Showed up and built. Didn't make it to the demo stage this time.",
+      image: "https://www.google.com/s2/favicons?domain=cursor.com&sz=128",
+    },
     {
       title: "Cursor Toronto Hackathon",
       dates: "June 25th, 2026",

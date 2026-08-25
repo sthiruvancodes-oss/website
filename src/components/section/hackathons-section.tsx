@@ -41,7 +41,14 @@ export default function HackathonsSection() {
                   <time className="text-xs text-muted-foreground">{hackathon.dates}</time>
                 )}
                 {hackathon.title && (
-                  <h3 className="font-semibold leading-none">{hackathon.title}</h3>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <h3 className="font-semibold leading-none">{hackathon.title}</h3>
+                    {"win" in hackathon && hackathon.win ? (
+                      <Badge className="text-[10px] uppercase tracking-wide bg-primary text-primary-foreground">
+                        {hackathon.win}
+                      </Badge>
+                    ) : null}
+                  </div>
                 )}
                 {hackathon.location && (
                   <p className="text-sm text-muted-foreground">{hackathon.location}</p>
@@ -51,7 +58,7 @@ export default function HackathonsSection() {
                     {hackathon.description}
                   </p>
                 )}
-                {hackathon.links && hackathon.links.length > 0 && (
+                {"links" in hackathon && hackathon.links && hackathon.links.length > 0 && (
                   <div className="mt-1 flex flex-row flex-wrap items-start gap-2">
                     {hackathon.links.map((link, idx) => (
                       <a
