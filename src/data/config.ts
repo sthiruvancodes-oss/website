@@ -3,7 +3,7 @@ export const CONFIG = {
   // Site Settings
   // ---------------------------------------------------------------------------
   site: {
-    url: "https://sthiruvancodes-oss.github.io",
+    url: "https://saisonthiru.com",
     locale: "en_AU",
     twitterHandle: "",
   },

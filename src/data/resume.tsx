@@ -10,7 +10,7 @@ import { Docker } from "@/components/ui/svgs/docker";
 export const DATA = {
   name: "Saison Thiruvananthaselvan",
   initials: "ST",
-  url: "https://sthiruvancodes-oss.github.io",
+  url: "https://saisonthiru.com",
   location: "Melbourne, Australia",
   locationLink: "https://www.google.com/maps/place/melbourne+victoria",
   description:
