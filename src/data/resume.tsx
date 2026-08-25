@@ -39,7 +39,7 @@ export const DATA = {
       order: 6, enabled: true,
       label: "Hackathons",
       heading: "Build under a clock",
-      text: "A few Cursor weekends. Some shipped to demo. One turned into Dispatch.",
+      text: "A few Cursor weekends. Demo'd all of them. Finalist once.",
     },
     photos: {
       order: 7, enabled: false,
@@ -317,7 +317,7 @@ export const DATA = {
         },
         {
           label: "Result",
-          text: "Invoice time went from 3.2 days to 28 seconds. One of 5 groups out of 20 that made it to demo.",
+          text: "Invoice time went from 3.2 days to 28 seconds. One of 5 groups out of 20 that made it to the finalist demo.",
         },
       ],
       links: [
@@ -337,7 +337,7 @@ export const DATA = {
       dates: "August 2026",
       location: "Toronto, Ontario",
       description:
-        "PM-focused Cursor x Intuit weekend. Built Dispatch with Davies (Product Solutions at Elise AI, UsersCRM and VoiceAI), Akshin Makkar (PM at Mercor), and Manan Joshi (PM, idea support). Phone-triggered browser agent with a live Chromium view.",
+        "PM-focused Cursor x Intuit weekend. Built and demo'd Dispatch with Davies (Product Solutions at Elise AI, UsersCRM and VoiceAI), Akshin Makkar (PM at Mercor), and Manan Joshi (PM, idea support). Phone-triggered browser agent with a live Chromium view.",
       image: "https://www.google.com/s2/favicons?domain=cursor.com&sz=128",
       links: [
         {
@@ -352,7 +352,7 @@ export const DATA = {
       dates: "July 2026",
       location: "Toronto, Ontario",
       description:
-        "Showed up and built. Didn't make it to the demo stage this time.",
+        "Built and demo'd. Didn't make the finalist round this time.",
       image: "https://www.google.com/s2/favicons?domain=cursor.com&sz=128",
     },
     {
@@ -360,7 +360,7 @@ export const DATA = {
       dates: "June 25th, 2026",
       location: "Toronto, Ontario",
       description:
-        "90 minutes, teams of five, a problem from Reddit, and it had to work. We built Field Invoice so wedding photographers can bill from the field instead of waiting days. One of 5 groups out of 20 that made it to demo.",
+        "90 minutes, teams of five, a problem from Reddit, and it had to work. We built Field Invoice so wedding photographers can bill from the field instead of waiting days. One of 5 groups out of 20 that made it to the finalist demo.",
       image: "https://www.google.com/s2/favicons?domain=cursor.com&sz=128",
       win: "Demo finalist",
       links: [
